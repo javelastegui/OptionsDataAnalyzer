@@ -1,3 +1,6 @@
 import os
+from dotenv import load_dotenv
 
-# This is a test
+load_dotenv()
+
+api_key = os.getenv("POLYGON_API_KEY")
