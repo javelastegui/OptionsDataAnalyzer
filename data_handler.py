@@ -17,6 +17,6 @@ def get_options_chain(ticker: str, expiry_date: str):
     ))
 
     df = pd.DataFrame(raw_data)
+    df['strike'] = df['details'].apply(lambda row: row['strike_price'])
+    df['option_type'] = df['details'].apply(lambda row: row['contract_type'])
     return df
-
-spy_df = get_options_chain("SPY", "2025-10-03")
