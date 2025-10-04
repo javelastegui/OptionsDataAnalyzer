@@ -9,7 +9,7 @@ load_dotenv()
 api_key = os.getenv("POLYGON_API_KEY")
 client = RESTClient(api_key)
 
-df = get_options_chain("SPY", "2025-10-03")
+df = get_options_chain("SPY", "2025-10-06")
 
 print("DataFrame Columns:", df.columns)
 
